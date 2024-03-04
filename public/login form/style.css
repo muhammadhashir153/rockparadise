@@ -1,0 +1,133 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+*{
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+section{
+    background-color: #d8d3d3;
+    width: 100%;
+    /* height: 100vh; */
+    padding: 60px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    font-family: "open sans" ;
+
+}
+.container{
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    -webkit-box-shadow: 0px 0px 15px #9e9a9a;
+            box-shadow: 0px 0px 15px #9e9a9a;
+}
+h1{
+    font-weight: 600;
+}
+.row .col-sm-6{
+    padding:80px 5vw;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+.full{
+    width: 100%;
+    margin: 5px 5px;
+    
+}
+label{
+    color: #9e9a9a;
+}
+input{
+    border: none;
+    border-bottom: 1px solid #9e9a9a;
+    padding: 2px 15px;
+}
+input:focus,
+input:active{
+    outline: none;
+}
+
+button{
+    border: none;
+    color: white;
+    border-radius: 25px;
+    background-color: #b35eec;
+    padding: 6px 20px;
+    -webkit-transition: all .4s;
+    -o-transition: all .4s;
+    transition: all .4s;
+}
+button:hover{
+    -webkit-box-shadow: 0px 0px 15px #9e9a9a;
+            box-shadow: 0px 0px 15px #9e9a9a;
+    -webkit-transition: .4s;
+    -o-transition: .4s;
+    transition: .4s;
+}
+.forgot{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+}
+img{
+    width: 100%;
+    height: 25vw;
+    -o-object-fit: contain;
+       object-fit: contain;
+}
+.remember input{
+    visibility: hidden;
+}
+.remember label{
+    position: relative;
+    cursor: pointer;
+}
+.remember label::before{
+    content: '';
+    position: absolute;
+    left: -22px;
+    top: 0;
+    background-image: url(./images/check.png);
+    background-position:center;
+    background-size: contain;
+    width: 20px;
+    height: 20px;
+    -webkit-transform: scale(0) rotateZ(180deg);
+        -ms-transform: scale(0) rotate(180deg);
+            transform: scale(0) rotateZ(180deg);
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+.remember label::after{
+    content: '';
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: -21px;
+    top: 1px;
+    border: 2px solid #b35eec;
+    border-radius: 50%;
+}
+.remember input:checked + label::before{
+    -webkit-transform: scale(1) rotateZ(0);
+        -ms-transform: scale(1) rotate(0);
+            transform: scale(1) rotateZ(0);
+}
+.remember input:checked + label::after{
+    border: none;
+}

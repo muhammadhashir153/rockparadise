@@ -1,0 +1,71 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
+
+header{
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+}
+#boxes{
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+  padding-left: 15px;
+  
+  
+}
+@media screen and (max-width:774px) {
+  #boxes{
+      -ms-grid-columns: 1fr 10px 1fr;
+      grid-template-columns: repeat(2,1fr);
+  }
+}
+@media screen and (max-width:522px){
+  #boxes{
+      -ms-grid-columns: 1fr;
+      grid-template-columns: repeat(1,1fr);
+  }
+}
+.collection-img{
+  width: 95%;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border: 2px solid black;
+  -webkit-box-shadow: 1px 3px 4px 3px;
+          box-shadow: 1px 3px 4px 3px;
+}
+.heading-new-collection{
+  color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center
+  
+}
+#boxes div:hover{
+-webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+        transform: scale(0.9);
+-webkit-transition: 0.5s;
+-o-transition: 0.5s;
+transition: 0.5s;
+}
+
+
+
+.jeweleryheading{
+  font-size: 70px;
+  font-weight: 600;
+  text-align: center;
+  color: darkgray;
+}
